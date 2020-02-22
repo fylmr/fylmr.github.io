@@ -1,0 +1,14 @@
+.main {
+    margin: auto;
+    min-width: 50%;
+    max-width: 800px;
+    margin-top: 4rem;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+dl {
+    margin-bottom: 0;
+}
