@@ -17,3 +17,9 @@ p {
 dl {
     margin-bottom: 0;
 }
+
+@media (max-width: 575.98px) { 
+    .project-name > * > *, .project-name {
+        font-style: italic;
+    }
+}
