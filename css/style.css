@@ -5,6 +5,11 @@
     margin-top: 4rem;
 }
 
+body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 p {
     margin-bottom: 0;
 }
