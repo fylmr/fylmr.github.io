@@ -18,6 +18,10 @@ dl {
     margin-bottom: 0;
 }
 
+.project-name > a > u{
+    color: #007bff;
+}
+
 @media (max-width: 575.98px) { 
     .project-name > * > *, .project-name {
         font-style: italic;
