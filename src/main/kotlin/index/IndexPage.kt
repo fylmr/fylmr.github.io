@@ -1,5 +1,6 @@
 package index
 
+import kotlinx.html.FlowContent
 import kotlinx.html.HEAD
 import kotlinx.html.a
 import kotlinx.html.body
@@ -22,14 +23,16 @@ fun getIndexPage(
     }
 
     body(classes = "mb-2") {
-        contents.forEach {
-            div("main") {
-                h4 { +it.name }
-                p { +it.jobTitle }
-                p("mt-2") {
-                    a(it.cvLink) { +it.cvTitle }
-                }
-            }
+        contents.forEach { it.renderContent(this) }
+    }
+}
+
+fun IndexPageContents.renderContent(flowContent: FlowContent) = flowContent.apply {
+    div("main") {
+        h4 { +name }
+        p { +jobTitle }
+        p("mt-2") {
+            a(cvLink) { +cvTitle }
         }
     }
 }
