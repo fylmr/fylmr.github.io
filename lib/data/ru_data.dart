@@ -4,7 +4,7 @@ abstract class CVData {
   late final String age;
   late final String mainCity;
 
-  late final String pageTitle;
+  String get pageTitle => "$name — $job";
   late final List<Contact> contacts;
 
   late final List<WhatIDo> whatIDos;
