@@ -1,0 +1,15 @@
+export enum Technologies {
+    kotlin = "Kotlin",
+    java = "Java",
+    kotlinMultiplatform = "Kotlin Multiplatform",
+    compose = "Compose",
+    coroutines = "Coroutines",
+    retrofit = "Retrofit",
+    dagger = "Dagger",
+    koin = "Koin",
+    rxJava = "RxJava",
+    room = "Room",
+    googlePay = "Google Pay",
+    mvvm = "MVVM",
+    mvp = "MVP",
+}
