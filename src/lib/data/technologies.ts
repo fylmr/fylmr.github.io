@@ -12,4 +12,15 @@ export enum Technologies {
     googlePay = "Google Pay",
     mvvm = "MVVM",
     mvp = "MVP",
+    espresso = "Espresso",
+    mockito = "Mockito",
+    git = "Git",
+    jenkins = "Jenkins",
+    gradle = "Gradle",
+    jira = "Jira",
+    wrike = "Wrike",
+    go = "Go",
+    python = "Python",
 }
+
+export const technologiesList = Object.values(Technologies);

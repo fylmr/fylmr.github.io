@@ -1,5 +1,19 @@
-import type {Company} from "./store";
 import {Technologies} from "./technologies";
+
+export interface Company {
+    companyName: string;
+    location: string;
+    startDate: Date;
+    endDate: Date | null;
+    projects: Project[],
+}
+
+export interface Project {
+    name: string;
+    link: string | null;
+    description: string;
+    technologies: string[];
+}
 
 let wrikeRu: Company = {
     companyName: "Wrike",
@@ -110,7 +124,7 @@ let itSpecialRu: Company = {
     ],
 }
 
-export let companiesRu: Company[] = [
+export let companies: Company[] = [
     wrikeRu,
     buduRu,
     eLegionRu,

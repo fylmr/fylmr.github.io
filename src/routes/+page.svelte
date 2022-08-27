@@ -55,4 +55,23 @@
             </div>
         {/each}
     </div>
+
+    <div class="skills">
+        <h2>{$cvData.additionalSkillsHeader}</h2>
+        <ul>
+            {#each $cvData.additionalSkills as skill}
+                <li>{@html skill.descriptionHtml}</li>
+            {/each}
+        </ul>
+    </div>
+
+    <div class="languages">
+        <h2>{$cvData.languagesHeader}</h2>
+        {#each $cvData.languages as language}
+            <div class="language">
+                {language.name}: {language.level}
+            </div>
+        {/each}
+    </div>
 </main>
+

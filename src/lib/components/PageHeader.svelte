@@ -25,4 +25,8 @@
             </div>
         {/each}
     </div>
+
+    <div class="technologies">
+        {$cvData.whatIWorkWithHeader}: {$cvData.whatIWorkWith.join(", ")}
+    </div>
 </header>
