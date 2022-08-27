@@ -41,4 +41,18 @@
             </div>
         {/each}
     </div>
+
+    <div class="education">
+        <h2>{$cvData.educationHeader}</h2>
+        {#each $cvData.education as edu}
+            <div class="edu">
+                <h3>{edu.school}</h3>
+                <h4>{edu.position}</h4>
+                <div class="dates">
+                    {formatExperienceDate(edu.startDate, edu.endDate)}
+                </div>
+                <p class="description">{edu.description}</p>
+            </div>
+        {/each}
+    </div>
 </main>

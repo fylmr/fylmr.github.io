@@ -1,6 +1,7 @@
 import {companiesRu} from "./companiesRu";
 import {type Header, headerRu} from "./header";
 import {writable, type Writable} from "svelte/store";
+import {type Education, educationRu} from "./education";
 
 export interface Company {
     companyName: string;
@@ -22,6 +23,9 @@ export interface CvData {
 
     experienceHeader: string;
     companies: Company[];
+
+    educationHeader: string;
+    education: Education[];
 }
 
 export let cvDataRu: CvData = {
@@ -29,6 +33,9 @@ export let cvDataRu: CvData = {
 
     experienceHeader: "Опыт работы",
     companies: companiesRu,
+
+    educationHeader: "Образование",
+    education: educationRu,
 }
 
 export const cvData: Writable<CvData> = writable(cvDataRu);
