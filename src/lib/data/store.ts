@@ -19,11 +19,15 @@ export interface Project {
 
 export interface CvData {
     header: Header;
+
+    experienceHeader: string;
     companies: Company[];
 }
 
 export let cvDataRu: CvData = {
     header: headerRu,
+
+    experienceHeader: "Опыт работы",
     companies: companiesRu,
 }
 

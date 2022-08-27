@@ -1,15 +1,44 @@
 <script lang="ts">
-    import {cvData} from "../lib/data/store";
+    import {cvData} from "$lib/data/store";
+    import {format} from 'date-fns'
+    import PageHeader from "$lib/components/PageHeader.svelte";
 
-    let yearsOld = Date.now() - $cvData.header.birthDate;
-    yearsOld = Math.floor(yearsOld / 1000 / 60 / 60 / 24 / 365);
+    function formatExperienceDate(from: Date, to: Date | null): string {
+        let result = "";
+        const fromMonthYear = format(from, 'MMM yyyy');
+        result += fromMonthYear;
+        if (to) {
+            const toMonthYear = format(to, 'MMM yyyy');
+            result += " – " + toMonthYear;
+        } else {
+            result += " – ...";
+        }
 
-    let yearsString = $cvData.header.yearsOldTemplate(yearsOld);
+        return result;
+    }
 </script>
 
-<header>
-    <h1>{$cvData.header.name}</h1>
-    <h2>{$cvData.header.job}</h2>
+<PageHeader/>
 
-    <h3>{yearsString}, {$cvData.header.city}, {$cvData.header.country}</h3>
-</header>
+<main>
+    <div class="experience">
+        <h2>{$cvData.experienceHeader}</h2>
+        {#each $cvData.companies as company}
+            <div class="company">
+                <h3>{company.companyName}</h3>
+                <div class="dates">
+                    {formatExperienceDate(company.startDate, company.endDate)}
+                </div>
+
+                {#each company.projects as project}
+                    <div class="project">
+                        <h4>{project.name}</h4>
+                        <div class="description">
+                            {project.description}
+                        </div>
+                    </div>
+                {/each}
+            </div>
+        {/each}
+    </div>
+</main>
