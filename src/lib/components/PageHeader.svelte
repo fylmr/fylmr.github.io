@@ -8,6 +8,10 @@
 
 </script>
 
+<svelte:head>
+    <title>{$cvData.header.name} — {$cvData.header.job}</title>
+</svelte:head>
+
 <header>
     <h1>{$cvData.header.name}</h1>
     <h2>{$cvData.header.job}</h2>
