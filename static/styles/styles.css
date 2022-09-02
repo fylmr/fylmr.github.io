@@ -2,3 +2,44 @@
     font-family: "Open Sans", sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    max-width: 50rem;
+}
+
+main {
+    margin: 2rem;
+    max-width: 50rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.contacts {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company {
+    margin-bottom: 1rem;
+}
+
+.company:last-of-type {
+    margin-bottom: 0;
+}
