@@ -4,6 +4,9 @@ export interface Skill {
 
 export let skillsRu: Skill[] = [
     {
+        descriptionHtml: "<b>Менторю</b> Junior и Middle Андроид-разработчиков, преподавал разработку на курсах"
+    },
+    {
         descriptionHtml: "Делаю пет-проекты для веба. " +
             "Активно работаю с <b>Django</b>, <b>Svelte</b>, <b>Go</b>"
     },
