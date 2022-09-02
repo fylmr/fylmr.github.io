@@ -10,7 +10,7 @@ export interface Education {
 export const educationRu: Education[] = [
     {
         school: "Балтийский Федеральный Университет им. И. Канта",
-        position: "«Компьютерная безопасность», диплом специалиста с отличием\n",
+        position: "«Компьютерная безопасность», красный диплом\n",
         location: "Калининград",
         startDate: new Date(2015, 9, 1),
         endDate: new Date(2022, 2, 1),

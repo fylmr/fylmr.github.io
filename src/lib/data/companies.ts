@@ -4,7 +4,7 @@ export interface Company {
     companyName: string;
     location: string;
     startDate: Date;
-    endDate: Date | null;
+    endDate: Date;
     projects: Project[],
 }
 
@@ -19,7 +19,7 @@ let wrikeRu: Company = {
     companyName: "Wrike",
     location: "Калининград (удалённо)",
     startDate: new Date(2022, 1, 22),
-    endDate: null,
+    endDate: new Date(),
     projects: [
         {
             name: "Wrike",

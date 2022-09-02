@@ -1,8 +1,11 @@
 <script lang="ts">
     import {cvData} from "$lib/data/store.ts";
+    import differenceInCalendarYears from 'date-fns/differenceInCalendarYears'
 
-    let yearsOld = Date.now() - $cvData.header.birthDate;
-    yearsOld = Math.floor(yearsOld / 1000 / 60 / 60 / 24 / 365);
+    let yearsOld = differenceInCalendarYears(
+        new Date(),
+        $cvData.header.birthDate
+    );
 
     let yearsString = $cvData.header.yearsOldTemplate(yearsOld);
 

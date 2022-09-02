@@ -29,7 +29,7 @@ export interface CvData {
 export let cvDataRu: CvData = {
     header: headerRu,
 
-    whatIWorkWithHeader: "С чем я работаю",
+    whatIWorkWithHeader: "Основные теги",
     whatIWorkWith: technologiesList,
 
     experienceHeader: "Опыт работы",

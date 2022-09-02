@@ -3,16 +3,13 @@
     import {format} from 'date-fns'
     import PageHeader from "$lib/components/PageHeader.svelte";
 
-    function formatExperienceDate(from: Date, to: Date | null): string {
+    function formatExperienceDate(from: Date, to: Date): string {
         let result = "";
         const fromMonthYear = format(from, 'MMM yyyy');
         result += fromMonthYear;
-        if (to) {
-            const toMonthYear = format(to, 'MMM yyyy');
-            result += " – " + toMonthYear;
-        } else {
-            result += " – ...";
-        }
+
+        const toMonthYear = format(to, 'MMM yyyy');
+        result += " – " + toMonthYear;
 
         return result;
     }
@@ -21,18 +18,23 @@
 <PageHeader/>
 
 <main>
-    <div class="experience">
+    <div class="experience cv-block">
         <h2>{$cvData.experienceHeader}</h2>
         {#each $cvData.companies as company}
             <div class="company">
                 <h3>{company.companyName}</h3>
-                <div class="dates">
+                <span class="dates">
                     {formatExperienceDate(company.startDate, company.endDate)}
-                </div>
+                </span>
 
                 {#each company.projects as project}
                     <div class="project">
-                        <h4>{project.name}</h4>
+                        {#if (project.link)}
+                            <h4><a href="{project.link}">{project.name}</a></h4>
+                        {/if}
+                        {#if (!project.link)}
+                            <h4>{project.name}</h4>
+                        {/if}
                         <div class="description">
                             {project.description}
                         </div>
@@ -42,21 +44,21 @@
         {/each}
     </div>
 
-    <div class="education">
+    <div class="education cv-block">
         <h2>{$cvData.educationHeader}</h2>
         {#each $cvData.education as edu}
             <div class="edu">
                 <h3>{edu.school}</h3>
-                <h4>{edu.position}</h4>
-                <div class="dates">
+                <span class="dates">
                     {formatExperienceDate(edu.startDate, edu.endDate)}
-                </div>
+                </span>
+                <h4 class="edu-position">{edu.position}</h4>
                 <p class="description">{edu.description}</p>
             </div>
         {/each}
     </div>
 
-    <div class="skills">
+    <div class="skills cv-block">
         <h2>{$cvData.additionalSkillsHeader}</h2>
         <ul>
             {#each $cvData.additionalSkills as skill}
@@ -65,7 +67,7 @@
         </ul>
     </div>
 
-    <div class="languages">
+    <div class="languages cv-block">
         <h2>{$cvData.languagesHeader}</h2>
         {#each $cvData.languages as language}
             <div class="language">
