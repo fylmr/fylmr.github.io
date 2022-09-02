@@ -38,6 +38,9 @@
                         <div class="description">
                             {project.description}
                         </div>
+                        <div class="project-technologies">
+                            {project.technologies.join(", ")}
+                        </div>
                     </div>
                 {/each}
             </div>

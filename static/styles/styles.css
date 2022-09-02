@@ -51,9 +51,13 @@ a, a:visited {
     margin-bottom: 1rem;
 }
 
-.technologies {
+.technologies, .project-technologies {
     font-size: 0.8rem;
     color: #a9a9a9;
+}
+
+.project-technologies {
+    margin-top: 0.25rem;
 }
 
 .company {

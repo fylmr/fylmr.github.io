@@ -12,13 +12,13 @@ export interface Project {
     name: string;
     link: string | null;
     description: string;
-    technologies: string[];
+    technologies: (string | Technologies)[];
 }
 
 let wrikeRu: Company = {
     companyName: "Wrike",
     location: "Калининград (удалённо)",
-    startDate: new Date(2022, 1, 22),
+    startDate: new Date(2022, 0, 22),
     endDate: new Date(),
     projects: [
         {
@@ -43,8 +43,8 @@ let wrikeRu: Company = {
 let buduRu: Company = {
     companyName: "Budu / Ренессанс Здоровье",
     location: "Калининград (удалённо)",
-    startDate: new Date(2020, 12, 1),
-    endDate: new Date(2022, 1, 22),
+    startDate: new Date(2020, 11, 1),
+    endDate: new Date(2022, 0, 22),
     projects: [
         {
             name: "Budu",
@@ -69,8 +69,8 @@ let buduRu: Company = {
 let eLegionRu: Company = {
     companyName: "e-Legion",
     location: "Калининград (удалённо)",
-    startDate: new Date(2018, 10, 1),
-    endDate: new Date(2020, 12, 1),
+    startDate: new Date(2018, 9, 1),
+    endDate: new Date(2020, 11, 1),
     projects: [
         {
             name: "Мой Tele2",
@@ -106,8 +106,8 @@ let eLegionRu: Company = {
 let itSpecialRu: Company = {
     companyName: "ITSpecial",
     location: "Калининград",
-    startDate: new Date(2018, 6, 1),
-    endDate: new Date(2018, 10, 1),
+    startDate: new Date(2018, 5, 1),
+    endDate: new Date(2018, 9, 1),
     projects: [
         {
             name: "IDesk",
