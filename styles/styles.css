@@ -1,0 +1,115 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    font-size: 10pt;
+    padding: 1rem;
+}
+
+body {
+    margin: auto;
+    max-width: 60rem;
+}
+
+header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+main {
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    display: inline;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+table {
+    border-spacing: unset;
+}
+
+td {
+    padding-right: 1rem;
+}
+
+a, a:visited {
+    color: #2194cc;
+}
+
+.cv-block {
+    margin-top: 2rem;
+}
+
+.contacts {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.technologies, .project-technologies {
+    font-size: 0.8rem;
+    color: #a9a9a9;
+}
+
+.project-technologies {
+    margin-top: 0.25rem;
+}
+
+.company {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.company:last-of-type {
+    margin-bottom: 0;
+}
+
+.dates {
+    font-size: 0.8rem;
+    color: #a9a9a9;
+    margin-left: 0.5rem;
+}
+
+.project {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project:first-of-type {
+    margin-top: 0.25rem;
+}
+
+.edu {
+    margin-top: 1rem;
+}
+
+.edu:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.edu-position {
+    margin-top: 0.5rem;
+}
