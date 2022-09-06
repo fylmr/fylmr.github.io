@@ -1,2 +1,2 @@
-import * as shared from "../../../src/routes/ru/+page.ts";
+import * as shared from "../../../src/routes/ru/+page.js";
 export { shared };

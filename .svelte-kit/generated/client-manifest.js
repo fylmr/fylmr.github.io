@@ -3,13 +3,9 @@ export { matchers } from './client-matchers.js';
 export const nodes = [
 	() => import('./nodes/0'),
 	() => import('./nodes/1'),
-	() => import('./nodes/2'),
-	() => import('./nodes/3'),
-	() => import('./nodes/4')
+	() => import('./nodes/2')
 ];
 
 export const dictionary = {
-	"": [2],
-	"en": [3],
-	"ru": [4]
+	"": [2]
 };
