@@ -16,7 +16,12 @@
 </svelte:head>
 
 <header>
-    <h1>{$cvData.header.name}</h1>
+    <div class="lang-versions">
+        <h1>{$cvData.header.name}</h1>
+        <a href="/ru">RU</a>
+        <a href="/en">EN</a>
+    </div>
+
     <h2>{$cvData.header.job}</h2>
     <span>{yearsString}, {$cvData.header.city}, {$cvData.header.country}</span>
 
@@ -33,3 +38,19 @@
         {$cvData.whatIWorkWithHeader}: {$cvData.whatIWorkWith.join(", ")}
     </div>
 </header>
+
+<style>
+    .lang-versions {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .lang-versions > h1 {
+        flex: 1 auto;
+    }
+
+    .lang-versions > a {
+        margin-left: 1rem;
+    }
+</style>

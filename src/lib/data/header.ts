@@ -19,7 +19,7 @@ export let headerRu: Header = {
     name: "Филипп Максимов",
     job: "Senior Android-разработчик",
     birthDate: new Date(1997, 8, 27),
-    yearsOldTemplate: yearsOldTemplate,
+    yearsOldTemplate: yearsOldTemplateRu,
     city: "Калининград",
     country: "Россия",
     contacts: [
@@ -40,9 +40,34 @@ export let headerRu: Header = {
         }
     ],
 }
+export let headerEn: Header = {
+    name: "Filipp Maksimov",
+    job: "Senior Android Developer",
+    birthDate: new Date(1997, 8, 27),
+    yearsOldTemplate: yearsOldTemplateEn,
+    city: "Kaliningrad",
+    country: "Russia",
+    contacts: [
+        {
+            serviceName: "E-mail",
+            serviceLink: "mailto:phmaksimov+io@gmail.com",
+            value: "phmaksimov@gmail.com",
+        },
+        {
+            serviceName: "Telegram",
+            serviceLink: "https://t.me/phhmaa",
+            value: "phhmaa",
+        },
+        {
+            serviceName: "Skype",
+            serviceLink: "skype:filaktet?chat",
+            value: "filaktet",
+        }
+    ],
+}
 
-function yearsOldTemplate(years: number) {
-    const lastNumber = years.toString()[years.toString().length -1];
+function yearsOldTemplateRu(years: number) {
+    const lastNumber = years.toString()[years.toString().length - 1];
     if (lastNumber === "1") {
         return `${years} год`;
     }
@@ -50,4 +75,8 @@ function yearsOldTemplate(years: number) {
         return `${years} года`;
     }
     return `${years} лет`;
+}
+
+function yearsOldTemplateEn(years: number) {
+    return `${years} years old`;
 }

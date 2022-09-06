@@ -1,11 +1,13 @@
-import {companies, type Company} from "./companies";
-import {type Header, headerRu} from "./header";
+import type {Company} from "./companies/companies";
+import {type Header, headerEn, headerRu} from "./header";
 import {writable, type Writable} from "svelte/store";
-import {type Education, educationRu} from "./education";
-import {type Skill, skillsRu} from "./skill";
-import {type Language, languagesRu} from "./language";
+import {type Education, educationEn, educationRu} from "./education";
+import {type Skill, skillsEn, skillsRu} from "./skill";
+import {type Language, languagesEn, languagesRu} from "./language";
 import type {Technologies} from "./technologies";
 import {technologiesList} from "./technologies";
+import {companiesEn} from "./companies/companiesEn";
+import {companiesRu} from "./companies/companiesRu";
 
 export interface CvData {
     header: Header;
@@ -33,7 +35,7 @@ export let cvDataRu: CvData = {
     whatIWorkWith: technologiesList,
 
     experienceHeader: "Опыт работы",
-    companies: companies,
+    companies: companiesRu,
 
     educationHeader: "Образование",
     education: educationRu,
@@ -45,5 +47,24 @@ export let cvDataRu: CvData = {
     languages: languagesRu,
 }
 
-export const cvData: Writable<CvData> = writable(cvDataRu);
+export let cvDataEn: CvData = {
+    header: headerEn,
+
+    whatIWorkWithHeader: "Tags",
+    whatIWorkWith: technologiesList,
+
+    experienceHeader: "Experience",
+    companies: companiesEn,
+
+    educationHeader: "Education",
+    education: educationEn,
+
+    additionalSkillsHeader: "Additional Skills",
+    additionalSkills: skillsEn,
+
+    languagesHeader: "Languages",
+    languages: languagesEn,
+}
+
+export const cvData: Writable<CvData> = writable(cvDataEn);
 

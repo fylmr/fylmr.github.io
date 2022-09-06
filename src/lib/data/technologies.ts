@@ -12,6 +12,8 @@ export enum Technologies {
     googlePay = "Google Pay",
     mvvm = "MVVM",
     mvp = "MVP",
+    webRtc = "WebRTC",
+    eSim = "e-SIM",
     espresso = "Espresso",
     mockito = "Mockito",
     git = "Git",

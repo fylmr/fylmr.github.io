@@ -21,3 +21,22 @@ export let languagesRu: Language[] = [
         level: "A1",
     },
 ]
+
+export let languagesEn: Language[] = [
+    {
+        name: "Russian",
+        level: "Native",
+    },
+    {
+        name: "English",
+        level: "C1",
+    },
+    {
+        name: "German",
+        level: "A2",
+    },
+    {
+        name: "Turkish",
+        level: "A1",
+    },
+]

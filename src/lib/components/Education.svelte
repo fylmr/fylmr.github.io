@@ -23,7 +23,7 @@
                     {formatExperienceDate(edu.startDate, edu.endDate)}
                 </span>
             <h4 class="edu-position">{edu.position}</h4>
-            <p class="description">{edu.description}</p>
+            <p class="description">{@html edu.description}</p>
         </div>
     {/each}
 </div>
