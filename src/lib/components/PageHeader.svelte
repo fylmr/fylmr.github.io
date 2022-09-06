@@ -1,7 +1,6 @@
 <script lang="ts">
     import {cvData} from "$lib/data/store.ts";
     import differenceInCalendarYears from 'date-fns/differenceInCalendarYears'
-    import {cvDataEn, cvDataRu} from "$lib/data/store.js";
 
     let yearsOld = differenceInCalendarYears(
         new Date(),
@@ -19,8 +18,8 @@
 <header>
     <div class="lang-versions">
         <h1>{$cvData.header.name}</h1>
-        <a href="/" on:click={() => $cvData = cvDataRu}>RU</a>
-        <a href="/" on:click={() => $cvData = cvDataEn}>EN</a>
+        <a href="/ru">RU</a>
+        <a href="/en">EN</a>
     </div>
 
     <h2>{$cvData.header.job}</h2>

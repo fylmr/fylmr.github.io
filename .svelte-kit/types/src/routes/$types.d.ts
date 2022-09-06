@@ -12,6 +12,6 @@ type LayoutParentData = EnsureParentData<{}>;
 export type PageServerData = null;
 export type PageLoad<OutputData extends OutputDataShape<PageParentData> = OutputDataShape<PageParentData>> = Kit.Load<RouteParams, PageServerData, PageParentData, OutputData>;
 export type PageLoadEvent = Parameters<PageLoad>[0];
-export type PageData = Omit<PageParentData, keyof Kit.AwaitedProperties<Awaited<ReturnType<typeof import('../../../../src/routes/+page.js').load>>>> & Kit.AwaitedProperties<Awaited<ReturnType<typeof import('../../../../src/routes/+page.js').load>>>;
+export type PageData = Omit<PageParentData, keyof Kit.AwaitedProperties<Awaited<ReturnType<typeof import('./proxy+page.js').load>>>> & Kit.AwaitedProperties<Awaited<ReturnType<typeof import('./proxy+page.js').load>>>;
 export type LayoutServerData = null;
 export type LayoutData = LayoutParentData;
