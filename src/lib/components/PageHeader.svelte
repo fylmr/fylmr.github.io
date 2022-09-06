@@ -18,7 +18,7 @@
 <header>
     <h1>{$cvData.header.name}</h1>
     <h2>{$cvData.header.job}</h2>
-    <h3>{yearsString}, {$cvData.header.city}, {$cvData.header.country}</h3>
+    <span>{yearsString}, {$cvData.header.city}, {$cvData.header.country}</span>
 
     <div class="contacts">
         {#each $cvData.header.contacts as contact}

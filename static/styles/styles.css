@@ -8,7 +8,7 @@ html {
 
 body {
     margin: auto;
-    max-width: 50rem;
+    max-width: 60rem;
 }
 
 header {
@@ -34,8 +34,21 @@ h3 {
     display: inline;
 }
 
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 ul {
     padding: 0;
+}
+
+table {
+    border-spacing: unset;
+}
+
+td {
+    padding-right: 1rem;
 }
 
 a, a:visited {
@@ -82,6 +95,10 @@ a, a:visited {
 .project {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.project:first-of-type {
+    margin-top: 0.25rem;
 }
 
 .edu {

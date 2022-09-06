@@ -2,6 +2,7 @@
     import {cvData} from "$lib/data/store";
     import {format} from 'date-fns'
     import PageHeader from "$lib/components/PageHeader.svelte";
+    import Languages from "$lib/components/Languages.svelte";
 
     function formatExperienceDate(from: Date, to: Date): string {
         let result = "";
@@ -70,13 +71,6 @@
         </ul>
     </div>
 
-    <div class="languages cv-block">
-        <h2>{$cvData.languagesHeader}</h2>
-        {#each $cvData.languages as language}
-            <div class="language">
-                {language.name}: {language.level}
-            </div>
-        {/each}
-    </div>
+    <Languages/>
 </main>
 
